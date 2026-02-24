@@ -57,22 +57,22 @@ public class Time
     public int Hour
     {
         get => _hour;
-        set => _hour = ValidateHour(value);
+        set => _hour = ValidHour(value);
     }
     public int Millisecond
     {
         get => _millisecond;
-        set => _millisecond = ValidateMillisecond(value);
+        set => _millisecond = ValidMillisecond(value);
     }
     public int Minute
     {
         get => _minute;
-        set => _minute = ValidateMinute(value);
+        set => _minute = ValidMinute(value);
     }
     public int Second
     {
         get => _second;
-        set => _second = ValidateSecond(value);
+        set => _second = ValidSecond(value);
     }
 
     //Method ToString
@@ -175,7 +175,7 @@ public class Time
 
     //Property validations
 
-    private int ValidateHour(int value)
+    private int ValidHour(int value)
     {
         if (value < 0 || value > 23)
             throw new ArgumentException($"The hour: {value}, is not valid.");
@@ -183,7 +183,7 @@ public class Time
         return value;
     }
 
-    private int ValidateMillisecond(int value)
+    private int ValidMillisecond(int value)
     {
         if (value < 0 || value > 999)
             throw new ArgumentOutOfRangeException(nameof(value), "Millisecond must be between 0 and 999.");
@@ -191,7 +191,7 @@ public class Time
         return value;
     }
 
-    private int ValidateMinute(int value)
+    private int ValidMinute(int value)
     {
         if (value < 0 || value > 59)
             throw new ArgumentOutOfRangeException(nameof(value), "Minute must be between 0 and 59.");
@@ -199,7 +199,7 @@ public class Time
         return value;
     }
 
-    private int ValidateSecond(int value)
+    private int ValidSecond(int value)
     {
         if (value < 0 || value > 59)
             throw new ArgumentOutOfRangeException(nameof(value), "Second must be between 0 and 59.");
