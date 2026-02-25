@@ -1,6 +1,5 @@
 ﻿namespace OOPWorkshop__1.Backend;
 
-
 public class Time
 {
     // Fields 
@@ -12,7 +11,7 @@ public class Time
 
     // Constructors
 
-    //Without Parameters = sin parametros #1
+    //Without Parameters 
     public Time()
     {
         _hour = 0;
@@ -21,20 +20,20 @@ public class Time
         _second = 0;
     }
 
-    //With Hours = horas #2
+    //With Hours 
     public Time(int hour)
     {
         Hour = hour;
     }
 
-    //with hours and minutes = horas y minutos #3
+    //with hours and minutes 
     public Time(int hour, int minute)
     {
         Hour = hour;
         Minute = minute;
     }
 
-    //with hours, minutes and seconds #4
+    //with hours, minutes and seconds 
     public Time(int hour, int minute, int second)
     {
         Hour = hour;
@@ -42,7 +41,7 @@ public class Time
         Second = second;
     }
 
-    //with hours, minutes, seconds and milliseconds #5
+    //with hours, minutes, seconds and milliseconds 
 
     public Time(int hour, int minute, int second, int millisecond)
     {
